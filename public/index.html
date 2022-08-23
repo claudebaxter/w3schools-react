@@ -19,7 +19,7 @@
       
       class Model extends Car {
         constructor(name, mod) {
-          super(name);
+          super(name); //method that refers to parent class--by calling method in the constructor method, we call the parents constructor method and gets access to the parent's properties & methods.
           this.model = mod;
         }
         show() {
@@ -30,5 +30,34 @@
       const mycar = new Model("Cadillac", "CTS");
       document.write(mycar.show());
       </script>
+
+      <p>This demonstrates a regular function:</p>
+      <p id="demo"></p>
+      <script>
+        hello = function() {
+          return "Hello World! (regular function)";
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+      </script>
+
+      <h1>Arrow Function</h1>
+      <p id="demo1"></p>
+      <script>
+        hello = () => {
+          return "Hello World! (arrow function)";
+        }
+
+        document.getElementById("demo1").innerHTML = hello();
+      </script>
+
+      <h2>Implicit Return</h2>
+      <p id="demo3"></p>
+      <script>
+        hello = () => "Hello World! (implicit return)";
+
+        document.getElementById("demo3").innerHTML = hello();
+      </script>
+
   </body>
 </html>
