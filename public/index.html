@@ -17,8 +17,18 @@
         }
       }
       
-      const mycar = new Car("Cadillac");
-      document.write(mycar.present());
+      class Model extends Car {
+        constructor(name, mod) {
+          super(name);
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ', it is a ' + this.model
+        }
+      }
+
+      const mycar = new Model("Cadillac", "CTS");
+      document.write(mycar.show());
       </script>
   </body>
 </html>
