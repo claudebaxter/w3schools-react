@@ -59,5 +59,24 @@
         document.getElementById("demo3").innerHTML = hello();
       </script>
 
+      <h3>Arrow Functions</h3>
+      <p>A demonstration of an arrow function in one line, with parameters.</p>
+      <p id="demo4"></p>
+
+      <script>
+        hello = (val) => "Hello " + val;
+
+        document.getElementById("demo4").innerHTML = hello("World");
+      </script>
+
+      <p>As you can see in the below example, you can skip the parentheses when you have only one parameter.</p>
+      <p id="demo5"></p>
+
+      <script>
+        hello = val => "Hello " + val;
+
+        document.getElementById("demo5").innerHTML = hello("World");
+      </script>
+
   </body>
 </html>
