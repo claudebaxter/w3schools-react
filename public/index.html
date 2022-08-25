@@ -106,5 +106,29 @@
       document.getElementById("btn").addEventListener("click", myheader.changeColor);
       </script>
 
+      <p>The <strong>this</strong> keyword represents the Header object.</p>
+      <button id="btn2">Click Me!</button>
+      <p><strong>this</strong> represents:</p>
+      <p id="demo7"></p>
+
+      <script>
+        class Header2 {
+          constructor() {
+            this.color = "Red";
+          }
+
+          changeColor = () => {
+            document.getElementById("demo7").innerHTML += this;
+          }
+        }
+
+        const myheader2 = new Header2();
+        //The window object calls the function:
+        window.addEventListener("load", myheader2.changeColor);
+        //A button object calls the function:
+        document.getElementById("btn2").addEventListener("click", myheader2.changeColor);
+      </script>
+
+
   </body>
 </html>
