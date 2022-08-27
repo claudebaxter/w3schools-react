@@ -147,6 +147,26 @@
         document.write("<p>Quotient " + divide + "</p>");
       </script>
 
+      <p id="demo8"></p>
+
+      <script>
+        const vehicleOne = {
+          brand: 'Cadillac',
+          model: 'CTS',
+          type: 'car',
+          year: 2013,
+          color: 'black'
+        }
+
+        myVehicle(vehicleOne);
+
+        function myVehicle({type, color, brand, model}) {
+          const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+          document.getElementById("demo8").innerHTML = message;
+        }
+      </script>
+
 
   </body>
 </html>
